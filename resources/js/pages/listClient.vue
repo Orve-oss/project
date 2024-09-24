@@ -147,13 +147,10 @@ import { ref, onMounted } from 'vue';
 let clients = ref([]); //declarer un tableau pour contenir la liste des clients
 
 const getClients = async () => {
-    try {
-    const response = await axios.get(`/list`);
-    clients.value = response.data;
-  } catch (error) {
-    console.error('Error fetching clients:', error);
-  }
-
+    
+  let response = await axios.get(`/list`);
+clients.value = response.data;
+  
 };
 
 onMounted(() => {

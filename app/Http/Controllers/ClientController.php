@@ -12,9 +12,9 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $list = Client::getAllClients();
+        $lists = Client::getAllClients();
 
-        return view('Clients.listClient', compact('list'));
+        return view('Clients.listClient', compact('lists'));
     }
 
     /**

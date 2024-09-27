@@ -77,8 +77,8 @@
 
 
                                         <tbody v-else align="center" colspan="5"> Aucun enregistrement</tbody> --}}
-                                        @foreach ($clients as $client)
-                                                                                    
+                                        @foreach ($lists as $list)
+
 
 
                                         @endforeach

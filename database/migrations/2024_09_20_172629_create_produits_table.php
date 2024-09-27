@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('designation');
             $table->integer('qteInit')->default(0);
             $table->integer('qteAlerte')->default(0);
-            $table->enum('actif', ['Disponible', 'Indisponible']);
+            $table->boolean('actif');
             $table->foreignId('categorie_id')->constrained('categories', 'id');
             $table->foreignId('fournisseur_id')->constrained('fournisseurs', 'id');
             $table->timestamps();

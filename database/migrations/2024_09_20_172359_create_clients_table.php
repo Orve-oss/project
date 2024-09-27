@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('adresse');
             $table->string('telephone')->nullable();
-            $table->enum('actif', ['actif', 'inactif']);
+            $table->boolean('actif');
             $table->timestamps();
         });
     }
